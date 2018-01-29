@@ -1,0 +1,7 @@
+[dev]
+r1 dev_os=eos hostname=127.0.0.1 username=vagrant password=vagrant port=12443
+r2 dev_os=eos hostname=127.0.0.1 username=vagrant password=vagrant port=12444
+r3 dev_os=junos hostname=127.0.0.1 username=vagrant password="" port=12203
+
+[all:vars]
+ansible_python_interpreter="/usr/bin/env python"

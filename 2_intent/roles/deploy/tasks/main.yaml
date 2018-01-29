@@ -1,0 +1,20 @@
+---
+- name: Assemble all the configuration bits
+  assemble:
+      src: "{{ host_dir }}/"
+      dest: "{{ host_dir }}/assembled.conf"
+  check_mode: no
+  changed_when: False
+- name: "Load configuration into the device"
+  napalm_install_config:
+    hostname: "{{ host }}"
+    username: "{{ username }}"
+    dev_os: "{{ os }}"
+    password: "{{ password }}"
+    optional_args:
+      port: "{{ port }}"
+    config_file: "{{ host_dir }}/assembled.conf"
+    commit_changes: "{{ not ansible_check_mode }}"
+    replace_config: false
+    get_diffs: true
+  tags: [print_action]

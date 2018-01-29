@@ -1,0 +1,20 @@
+---
+- name: Playbook to configure devices
+  hosts: all
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: "Load configuration into the device"
+      napalm_install_config:
+        hostname: "{{ hostname }}"
+        username: "{{ username }}"
+        dev_os: "{{ dev_os }}"
+        password: "{{ password }}"
+        optional_args:
+          port: "{{ port }}"
+        config_file: "configuration/{{ inventory_hostname }}.txt"
+        commit_changes: "{{ not ansible_check_mode }}"
+        replace_config: false
+        get_diffs: true
+      tags: [print_action]

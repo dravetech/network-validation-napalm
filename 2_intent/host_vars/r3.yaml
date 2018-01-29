@@ -1,0 +1,18 @@
+---
+hostname: rtr00
+
+asn: 65003
+router_id: "3.3.3.3"
+
+interfaces:
+  - name: "lo0"
+    ip_address: "2001:db8:b33f::3/128"
+  - name: "ge-0/0/1"
+    ip_address: "2001:db8:caf3:13::1/127"
+  - name: "ge-0/0/2"
+    ip_address: "2001:db8:caf3:23::1/127"
+peers:
+  - ip: "2001:db8:caf3:13::"
+    asn: 65001
+  - ip: "2001:db8:caf3:23::"
+    asn: 65002

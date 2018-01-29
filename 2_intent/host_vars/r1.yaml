@@ -1,0 +1,18 @@
+---
+hostname: r1
+
+asn: 65001
+router_id: "1.1.1.1"
+
+interfaces:
+  - name: "lo0"
+    ip_address: "2001:db8:b33f::1/128"
+  - name: "et1"
+    ip_address: "2001:db8:caf3:12::/127"
+  - name: "et2"
+    ip_address: "2001:db8:caf3:13::/127"
+peers:
+  - ip: "2001:db8:caf3:12::1"
+    asn: 65002
+  - ip: "2001:db8:caf3:13::1"
+    asn: 65003

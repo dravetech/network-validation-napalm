@@ -1,0 +1,179 @@
+@import url('http:////cdn.jsdelivr.net/font-hack/2.020/css/hack-extended.min.css');
+
+slides slide {
+	font-family: Avenir, 'Open Sans', Arial, sans-serif;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.highlight, .linenodiv pre {
+  overflow: hidden;
+  background: transparent;
+}
+
+pre {
+	font-family: 'Hack', 'Source Code Pro', 'Courier New', monospace;
+}
+
+.highlight pre, .linenodiv pre {
+    padding: 0.5em;
+    margin: 0.1em;
+	width: 100%;
+	left: 0px;
+}
+
+slide.flex-columns-2 article {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    max-height: 610;
+
+}
+
+article {
+    width: 100%;
+    max-height: 520px;
+    overflow: hidden;
+}
+
+div.smaller-text .highlight .hll {
+    padding: 0em 100% 0em 0px;
+}
+
+.highlight .hll {
+    padding: 0.1em 100% 0.1em 0px;
+}
+
+td.linenos, td.code {
+	padding: 0px;
+}
+
+table.highlighttable {
+	border-bottom: 0px;
+}
+
+div.code-block-caption {
+	padding-bottom: 10px;
+}
+
+a.image-reference {
+	border-bottom: 0px;
+}
+
+.float-50 {
+  overflow: hidden;
+  float: left;
+  width: 49%;
+  max-width: 49%;
+  padding-right: 0.1em;
+}
+
+.title-slide hgroup, .title-slide article {
+    top: 40%;
+    position: relative;
+}
+
+.sub-title {
+  font-size: 38px;
+  line-height: 38px;
+  letter-spacing: -2px;
+  color: #515151;
+  font-weight: 600;
+}
+
+strong, b {
+    font-weight: bolder;
+    color: black;
+}
+
+/* bullet points ordered numbers */
+
+ol li ol {
+  margin-left: 1em;
+}
+
+ol ol {
+  margin-top: 0px;
+}
+
+/* end bullet points ordered numbers */
+
+/* bullet points unordered */
+
+ul li::before {
+  content: "";
+  margin-left: 0px;
+  font-weight: normal;
+}
+
+ul li ul li:before {
+  content: "";
+  margin-left: 0px;
+}
+
+/* end bullet points unordered */
+
+.agenda h2 {
+  visibility: hidden;
+}
+
+.agenda li {
+  font-size: 2em;
+  line-height: 1em;
+  margin: 1% 10% 1% 10%;
+  color: #AAA;
+}
+
+.agenda .pre {
+  color: #AAA;
+}
+
+.agenda li li {
+  font-size: 1em;
+  margin: 0px;
+}
+
+.agenda li strong {
+  color: #222;
+  font-weight: bold;
+}
+
+div.warning {
+    padding: 4px 4px 4px 4px;
+    background-color: #6D7B8D;
+    border-radius: 25px;
+    color: white;
+}
+
+div.warning p.first {
+    display: none;
+}
+
+div.warning p.last::before {
+    content: "⚠ ";
+}
+div.warning p.last {
+    font-size: 0.75em;
+    margin: 4px 4px 4px 4px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+div.smaller-text pre {
+    font-size: 0.75em;
+    line-height: 1.2em;
+}
+
+@media print {
+  slides slide {
+    background: white !important;
+  }
+  body {
+	  background: white !important;
+  }
+}

@@ -1,0 +1,36 @@
+event-handler dhclient
+   trigger on-boot
+   action bash sudo /mnt/flash/initialize_ma1.sh
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname r1
+!
+spanning-tree mode mstp
+!
+aaa authorization exec default local
+!
+aaa root secret sha512 $6$Dz51i4NStSdKhZ9R$tokFC7eawhTQ/EjXnhKeS5gKCI4HpMK0qDbOHzqeA0zvlq6URmZ45.C2A8k8e4hbJq3uhYAkgl063ePalfSLk0
+!
+username admin privilege 15 role network-admin secret sha512 $6$0.oFEC1IjmRUh/nb$Ti0ooBAgfhjXsu2u7cb6sa4OEJYLuIEktmflfeYZZhUdozi5kDatRS670QMYL3bDlW/u16Ck2iFlSzuLDjQw9/
+username vagrant privilege 15 role network-admin secret sha512 $6$2Ki9U5A8SH5abvqj$9Om/DVb93Tx/3DKi12enSNzFirFwawHTdIFYqeIHdSPrslFVFwAhDK19ysPLDl9uFXn22UVgTyBrQitk2868B/
+!
+interface Ethernet1
+   no switchport
+   ipv6 address 2001:db8:ffff:1::/127
+!
+interface Ethernet2
+   no switchport
+   ipv6 address 2001:db8:ffff:2::/127
+!
+interface Management1
+   ip address 10.0.2.15/24
+!
+ip routing
+!
+ipv6 unicast-routing
+!
+management api http-commands
+   no shutdown
+!
+end

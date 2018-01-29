@@ -1,0 +1,32 @@
+---
+- name: Simple configuration
+  hosts: all
+  connection: local
+  gather_facts: no
+  vars:
+      conf_dir: "{{ playbook_dir }}/.compiled/"
+
+  pre_tasks:
+     - name: Set some global facts
+       set_fact:
+          host_dir: "{{ conf_dir }}/{{ inventory_hostname}}"
+       changed_when: False
+       check_mode: no
+     - name: Make sure there are no remains from a previous run
+       file:
+         path: "{{ host_dir }}"
+         state: absent
+       changed_when: False
+       check_mode: no
+     - name: Create folder to store configurations and diffs for/from the devices
+       file:
+         path: "{{ host_dir }}"
+         state: directory
+       changed_when: False
+       check_mode: no
+
+  roles:
+    - base
+    - ipfabric
+    - deploy
+    - verify_assert
