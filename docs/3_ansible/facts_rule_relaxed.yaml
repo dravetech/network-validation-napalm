@@ -1,0 +1,8 @@
+- get_facts:
+    hostname: n9k2
+    os_version: 7.0.*
+    interface_list:
+        list:
+            - Vlan5
+            - Vlan40
+            - Vlan100

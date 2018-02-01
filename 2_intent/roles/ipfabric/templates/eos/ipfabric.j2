@@ -6,6 +6,7 @@ default interface {{ interface.name }}
 interface {{ interface.name }}
   {{ 'no switchport' if not interface.name.startswith("lo") else "" }}
   ipv6 address {{ interface.ip_address }}
+  ipv6 address fe80::{{ inventory_hostname[-1] }}/64 link-local
 
 {% endfor %}
 

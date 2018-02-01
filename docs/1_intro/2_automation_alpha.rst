@@ -1,31 +1,31 @@
 Automation v0.0.1-alpha1
 ------------------------
 
-.. image:: /_static/alpha/0.png
+.. image:: /_static/1_intro/alpha/0.png
    :scale: 40 %
 
 Automation v0.0.1-alpha1
 ------------------------
 
-.. image:: /_static/alpha/1.png
+.. image:: /_static/1_intro/alpha/1.png
    :scale: 40 %
 
 Automation v0.0.1-alpha1
 ------------------------
 
-.. image:: /_static/alpha/2.png
+.. image:: /_static/1_intro/alpha/2.png
    :scale: 40 %
 
 Automation v0.0.1-alpha1
 ------------------------
 
-.. image:: /_static/alpha/3.png
+.. image:: /_static/1_intro/alpha/3.png
    :scale: 40 %
 
 Automation v0.0.1-alpha1
 ------------------------
 
-* Manual process end to end
+* Half-baked automation process
 * Immediate feedback
 * Complexity doesn't scale
       * More devices, harder to check them all
@@ -35,7 +35,7 @@ Automation v0.0.1-alpha1
 Alternative
 -----------
 
-.. image:: /_static/alpha/alternative.png
+.. image:: /_static/1_intro/alpha/alternative.png
    :scale: 37 %
 
 |

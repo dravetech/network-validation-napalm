@@ -1,4 +1,6 @@
 ---
+- pause:
+    seconds: 10
 - name: get facts from device
   napalm_get_facts:
     hostname: "{{ host }}"

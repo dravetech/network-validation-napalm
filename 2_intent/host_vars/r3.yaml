@@ -1,5 +1,5 @@
 ---
-hostname: rtr00
+hostname: r3
 
 asn: 65003
 router_id: "3.3.3.3"

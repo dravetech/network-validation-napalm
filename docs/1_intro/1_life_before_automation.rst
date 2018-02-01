@@ -1,31 +1,31 @@
 Before Automation
 -----------------
 
-.. image:: /_static/before/0.png
+.. image:: /_static/1_intro/before/0.png
    :scale: 40 %
 
 Before Automation
 -----------------
 
-.. image:: /_static/before/1.png
+.. image:: /_static/1_intro/before/1.png
    :scale: 40 %
 
 Before Automation
 -----------------
 
-.. image:: /_static/before/2.png
+.. image:: /_static/1_intro/before/2.png
    :scale: 40 %
 
 Before Automation
 -----------------
 
-.. image:: /_static/before/3.png
+.. image:: /_static/1_intro/before/3.png
    :scale: 40 %
 
 Before Automation
 -----------------
 
-.. image:: /_static/before/4.png
+.. image:: /_static/1_intro/before/4.png
    :scale: 40 %
 
 Before Automation

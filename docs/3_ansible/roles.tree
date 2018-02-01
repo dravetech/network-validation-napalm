@@ -1,0 +1,18 @@
+roles
+├── base
+│   ├── tasks/main.yaml
+│   │   └── main.yml
+│   └── templates
+│       ├── eos
+│       │   └── simple.j2
+│       └── junos
+│           └── simple.j2
+├── ipfabric
+│   ├── tasks/main.yaml
+│   └── templates
+│       ├── eos
+│       │   └── ipfabric.j2
+│       └── junos
+│           └── ipfabric.j2
+└── deploy
+    └── tasks/main.yaml

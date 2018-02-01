@@ -1,0 +1,12 @@
+- get_facts:
+    hostname: n9k2
+    os_version: 7.0.*
+    interface_list:
+        _mode: strict
+        list:
+            - Vlan5
+            - Vlan40
+            - Vlan100,
+            - GigabitEthernet0/1
+            - GigabitEthernet0/2,
+            - Port-channel1]

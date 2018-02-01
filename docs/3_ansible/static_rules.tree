@@ -1,0 +1,16 @@
+    2_intent/roles/validate_static/
+    ├── files
+    │   ├── r1
+    │   │   ├── bgp.yaml
+    │   │   ├── interfaces.yaml
+    │   │   └── routes.yaml
+    │   ├── r2
+    │   │   ├── bgp.yaml
+    │   │   ├── interfaces.yaml
+    │   │   └── routes.yaml
+    │   └── r3
+    │       ├── bgp.yaml
+    │       ├── interfaces.yaml
+    │       └── routes.yaml
+    └── tasks
+        └── main.yaml

@@ -1,0 +1,746 @@
+Pausing for 10 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+.
+# validate_static : validate deployment ***********************************************************************************
+  * r2                         - FAILED!!! -- One or more items failed ----------------------------
+      * interfaces                  - changed=False --  ------------------------------------------------
+      * bgp                         - FAILED!!! -- Device does not comply with policy ------------------
+      * routes                      - FAILED!!! -- Device does not comply with policy ------------------
+  * r1                         - FAILED!!! -- One or more items failed ----------------------------
+      * interfaces                  - changed=False --  ------------------------------------------------
+      * bgp                         - FAILED!!! -- Device does not comply with policy ------------------
+      * routes                      - FAILED!!! -- Device does not comply with policy ------------------
+  * r3                         - FAILED!!! -- One or more items failed ----------------------------
+      * interfaces                  - FAILED!!! -- Device does not comply with policy ------------------
+      * bgp                         - changed=False --  ------------------------------------------------
+      * routes                      - FAILED!!! -- Device does not comply with policy ------------------
+# validate_static : Report ************************************************************************************************
+  * r1                         - changed=False ----------------------------------------------------
+    {
+        "changed": false,
+        "failed": true,
+        "msg": "One or more items failed",
+        "results": [
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "changed": false,
+                "compliance_report": {
+                    "complies": true,
+                    "get_interfaces_ip": {
+                        "complies": true,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "Ethernet1": {
+                                "complies": true,
+                                "nested": true
+                            },
+                            "Ethernet2": {
+                                "complies": true,
+                                "nested": true
+                            },
+                            "Loopback0": {
+                                "complies": true,
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "eos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12443
+                        },
+                        "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r1/interfaces.yaml"
+                    }
+                },
+                "item": "interfaces"
+            },
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "compliance_report": {
+                    "complies": false,
+                    "get_bgp_neighbors": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "global": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [],
+                                    "present": {
+                                        "peers": {
+                                            "complies": false,
+                                            "diff": {
+                                                "complies": false,
+                                                "extra": [],
+                                                "missing": [],
+                                                "present": {
+                                                    "2001:db8:caf3:12::1": {
+                                                        "complies": false,
+                                                        "diff": {
+                                                            "complies": false,
+                                                            "extra": [],
+                                                            "missing": [],
+                                                            "present": {
+                                                                "address_family": {
+                                                                    "complies": false,
+                                                                    "diff": {
+                                                                        "complies": false,
+                                                                        "extra": [],
+                                                                        "missing": [],
+                                                                        "present": {
+                                                                            "ipv6": {
+                                                                                "complies": false,
+                                                                                "diff": {
+                                                                                    "complies": false,
+                                                                                    "extra": [],
+                                                                                    "missing": [],
+                                                                                    "present": {
+                                                                                        "received_prefixes": {
+                                                                                            "complies": true,
+                                                                                            "nested": false
+                                                                                        },
+                                                                                        "sent_prefixes": {
+                                                                                            "actual_value": 0,
+                                                                                            "complies": false,
+                                                                                            "expected_value": ">0",
+                                                                                            "nested": false
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "nested": true
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "nested": true
+                                                                },
+                                                                "is_up": {
+                                                                    "actual_value": false,
+                                                                    "complies": false,
+                                                                    "expected_value": true,
+                                                                    "nested": false
+                                                                }
+                                                            }
+                                                        },
+                                                        "nested": true
+                                                    },
+                                                    "2001:db8:caf3:13::1": {
+                                                        "complies": true,
+                                                        "nested": true
+                                                    }
+                                                }
+                                            },
+                                            "nested": true
+                                        },
+                                        "router_id": {
+                                            "complies": true,
+                                            "nested": false
+                                        }
+                                    }
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "failed": true,
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "eos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12443
+                        },
+                        "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r1/bgp.yaml"
+                    }
+                },
+                "item": "bgp",
+                "msg": "Device does not comply with policy"
+            },
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "compliance_report": {
+                    "complies": false,
+                    "route to r2": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::2/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:12::1"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:13::1"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "route to r3": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::3/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:12::1"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:13::1"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "failed": true,
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "eos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12443
+                        },
+                        "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r1/routes.yaml"
+                    }
+                },
+                "item": "routes",
+                "msg": "Device does not comply with policy"
+            }
+        ]
+    }
+  * r2                         - changed=False ----------------------------------------------------
+    {
+        "changed": false,
+        "failed": true,
+        "msg": "One or more items failed",
+        "results": [
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "changed": false,
+                "compliance_report": {
+                    "complies": true,
+                    "get_interfaces_ip": {
+                        "complies": true,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "Ethernet1": {
+                                "complies": true,
+                                "nested": true
+                            },
+                            "Ethernet2": {
+                                "complies": true,
+                                "nested": true
+                            },
+                            "Loopback0": {
+                                "complies": true,
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "eos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12444
+                        },
+                        "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r2/interfaces.yaml"
+                    }
+                },
+                "item": "interfaces"
+            },
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "compliance_report": {
+                    "complies": false,
+                    "get_bgp_neighbors": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "global": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [],
+                                    "present": {
+                                        "peers": {
+                                            "complies": false,
+                                            "diff": {
+                                                "complies": false,
+                                                "extra": [],
+                                                "missing": [],
+                                                "present": {
+                                                    "2001:db8:caf3:12::": {
+                                                        "complies": false,
+                                                        "diff": {
+                                                            "complies": false,
+                                                            "extra": [],
+                                                            "missing": [],
+                                                            "present": {
+                                                                "address_family": {
+                                                                    "complies": false,
+                                                                    "diff": {
+                                                                        "complies": false,
+                                                                        "extra": [],
+                                                                        "missing": [],
+                                                                        "present": {
+                                                                            "ipv6": {
+                                                                                "complies": false,
+                                                                                "diff": {
+                                                                                    "complies": false,
+                                                                                    "extra": [],
+                                                                                    "missing": [],
+                                                                                    "present": {
+                                                                                        "received_prefixes": {
+                                                                                            "complies": true,
+                                                                                            "nested": false
+                                                                                        },
+                                                                                        "sent_prefixes": {
+                                                                                            "actual_value": 0,
+                                                                                            "complies": false,
+                                                                                            "expected_value": ">0",
+                                                                                            "nested": false
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "nested": true
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "nested": true
+                                                                },
+                                                                "is_up": {
+                                                                    "actual_value": false,
+                                                                    "complies": false,
+                                                                    "expected_value": true,
+                                                                    "nested": false
+                                                                }
+                                                            }
+                                                        },
+                                                        "nested": true
+                                                    },
+                                                    "2001:db8:caf3:23::1": {
+                                                        "complies": true,
+                                                        "nested": true
+                                                    }
+                                                }
+                                            },
+                                            "nested": true
+                                        },
+                                        "router_id": {
+                                            "complies": true,
+                                            "nested": false
+                                        }
+                                    }
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "failed": true,
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "eos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12444
+                        },
+                        "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r2/bgp.yaml"
+                    }
+                },
+                "item": "bgp",
+                "msg": "Device does not comply with policy"
+            },
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "compliance_report": {
+                    "complies": false,
+                    "route to r1": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::1/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:12::"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:23::1"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "route to r3": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::3/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:12::"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:23::1"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "failed": true,
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "eos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12444
+                        },
+                        "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r2/routes.yaml"
+                    }
+                },
+                "item": "routes",
+                "msg": "Device does not comply with policy"
+            }
+        ]
+    }
+  * r3                         - changed=False ----------------------------------------------------
+    {
+        "changed": false,
+        "failed": true,
+        "msg": "One or more items failed",
+        "results": [
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "compliance_report": {
+                    "complies": false,
+                    "route to r1": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::1/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:23::"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:13::"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "route to r2": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::2/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:13::"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:23::"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "failed": true,
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "junos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12203
+                        },
+                        "password": "",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "vagrant",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r3/interfaces.yaml"
+                    }
+                },
+                "item": "interfaces",
+                "msg": "Device does not comply with policy"
+            },
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "changed": false,
+                "compliance_report": {
+                    "complies": true,
+                    "get_bgp_neighbors": {
+                        "complies": true,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "global": {
+                                "complies": true,
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "junos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12203
+                        },
+                        "password": "",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "vagrant",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r3/bgp.yaml"
+                    }
+                },
+                "item": "bgp"
+            },
+            {
+                "_ansible_item_result": true,
+                "_ansible_no_log": false,
+                "_ansible_parsed": true,
+                "compliance_report": {
+                    "complies": false,
+                    "get_bgp_neighbors": {
+                        "complies": true,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "global": {
+                                "complies": true,
+                                "nested": true
+                            }
+                        }
+                    },
+                    "get_interfaces_ip": {
+                        "complies": true,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "ge-0/0/1.0": {
+                                "complies": true,
+                                "nested": true
+                            },
+                            "ge-0/0/2.0": {
+                                "complies": true,
+                                "nested": true
+                            },
+                            "lo0.0": {
+                                "complies": true,
+                                "nested": true
+                            }
+                        }
+                    },
+                    "route to r1": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::1/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:23::"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:13::"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "route to r2": {
+                        "complies": false,
+                        "extra": [],
+                        "missing": [],
+                        "present": {
+                            "2001:db8:b33f::2/128": {
+                                "complies": false,
+                                "diff": {
+                                    "complies": false,
+                                    "extra": [],
+                                    "missing": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:13::"
+                                        }
+                                    ],
+                                    "present": [
+                                        {
+                                            "next_hop": "2001:db8:caf3:23::"
+                                        }
+                                    ]
+                                },
+                                "nested": true
+                            }
+                        }
+                    },
+                    "skipped": []
+                },
+                "failed": true,
+                "invocation": {
+                    "module_args": {
+                        "data": null,
+                        "dev_os": "junos",
+                        "hostname": "127.0.0.1",
+                        "models": null,
+                        "optional_args": {
+                            "port": 12203
+                        },
+                        "password": "",
+                        "provider": null,
+                        "timeout": 60,
+                        "username": "vagrant",
+                        "validation_file": "/Users/dbarroso/workspace/network-validation-napalm/2_intent/roles/validate_static/files/r3/routes.yaml"
+                    }
+                },
+                "item": "routes",
+                "msg": "Device does not comply with policy"
+            }
+        ]
+    }
+
+# STATS *******************************************************************************************************************
+r1    : ok=9	changed=1	failed=1	unreachable=0
+r2    : ok=8	changed=0	failed=1	unreachable=0
+r3    : ok=8	changed=0	failed=1	unreachable=0

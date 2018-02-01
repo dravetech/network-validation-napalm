@@ -5,7 +5,7 @@
       dest: "{{ host_dir }}/assembled.conf"
   check_mode: no
   changed_when: False
-- name: "Load configuration into the device"
+- name: "Deploy Fabric"
   napalm_install_config:
     hostname: "{{ host }}"
     username: "{{ username }}"

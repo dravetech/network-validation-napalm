@@ -1,0 +1,20 @@
+---
+- get_route_to:
+    _name: route to r1
+    _kwargs:
+      destination: "2001:db8:b33f::1"
+      protocol: "bgp"
+    2001:db8:b33f::1/128:
+      list:
+        - next_hop: "2001:db8:caf3:13::"
+        - next_hop: "2001:db8:caf3:23::"
+
+- get_route_to:
+    _name: route to r2
+    _kwargs:
+      destination: "2001:db8:b33f::2"
+      protocol: "bgp"
+    2001:db8:b33f::2/128:
+      list:
+        - next_hop: "2001:db8:caf3:13::"
+        - next_hop: "2001:db8:caf3:23::"

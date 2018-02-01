@@ -1,7 +1,7 @@
 @import url('http:////cdn.jsdelivr.net/font-hack/2.020/css/hack-extended.min.css');
 
 slides slide {
-	font-family: Avenir, 'Open Sans', Arial, sans-serif;
+  font-family: Avenir, 'Open Sans', Arial, sans-serif;
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -17,7 +17,7 @@ pre {
 	font-family: 'Hack', 'Source Code Pro', 'Courier New', monospace;
 }
 
-.highlight pre, .linenodiv pre {
+.highlight pre, .linenodiv pre, p {
     padding: 0.5em;
     margin: 0.1em;
 	width: 100%;
@@ -36,10 +36,6 @@ article {
     width: 100%;
     max-height: 520px;
     overflow: hidden;
-}
-
-div.smaller-text .highlight .hll {
-    padding: 0em 100% 0em 0px;
 }
 
 .highlight .hll {
@@ -62,13 +58,87 @@ a.image-reference {
 	border-bottom: 0px;
 }
 
+.float-30 {
+  overflow: hidden;
+  float: left;
+  width: 28.8%;
+  max-width: 28.8%;
+  padding-right: 0.1em;
+}
+
+p.float-30 {
+  overflow: visible;
+  padding-left: 0.5em;
+}
+
+.float-33 {
+  overflow: hidden;
+  float: left;
+  width: 33.0%;
+  max-width: 33.0%;
+  padding-right: 0.1em;
+}
+
+p.float-33 {
+  overflow: visible;
+  padding-left: 0.5em;
+}
+
+
+.float-40 {
+  overflow: hidden;
+  float: left;
+  width: 38.8%;
+  max-width: 38.8%;
+  padding-right: 0.1em;
+}
+
+p.float-40 {
+  overflow: visible;
+  padding-left: 0.5em;
+}
+
+
 .float-50 {
   overflow: hidden;
   float: left;
-  width: 49%;
-  max-width: 49%;
+  width: 48.8%;
+  max-width: 48.8%;
   padding-right: 0.1em;
 }
+
+p.float-50 {
+  overflow: visible;
+  padding-left: 0.5em;
+}
+
+.float-60 {
+  overflow: hidden;
+  float: left;
+  width: 58.8%;
+  max-width: 58.8%;
+  padding-right: 0.1em;
+}
+
+p.float-60 {
+  overflow: visible;
+  padding-left: 0.5em;
+}
+
+
+.float-70 {
+  overflow: hidden;
+  float: left;
+  width: 68.8%;
+  max-width: 68.8%;
+  padding-right: 0.1em;
+}
+
+p.float-70 {
+  overflow: visible;
+  padding-left: 0.5em;
+}
+
 
 .title-slide hgroup, .title-slide article {
     top: 40%;
@@ -164,9 +234,22 @@ img {
     margin: auto;
 }
 
-div.smaller-text pre {
+.smaller-text pre, .smaller-text {
+    font-size: 0.88em;
+    line-height: 1.2em;
+}
+
+div.smaller-text .highlight .hll {
+    padding: 0em 100% 0em 0px;
+}
+
+.smallest-text pre, .smallest-text {
     font-size: 0.75em;
     line-height: 1.2em;
+}
+
+div.smallest-text .highlight .hll {
+    padding: 0em 100% 0em 0px;
 }
 
 @media print {

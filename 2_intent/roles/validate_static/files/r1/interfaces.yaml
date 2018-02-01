@@ -1,0 +1,14 @@
+---
+- get_interfaces_ip:
+    Ethernet1:
+      ipv6:
+        2001:db8:caf3:12:::
+          prefix_length: 127
+    Ethernet2:
+      ipv6:
+        2001:db8:caf3:13:::
+          prefix_length: 127
+    Loopback0:
+      ipv6:
+        2001:db8:b33f::1:
+          prefix_length: 128
