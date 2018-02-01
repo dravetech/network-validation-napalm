@@ -10,10 +10,14 @@ Summary
 Questions?
 ----------
 
-* @napalm_auto
 * @dbarrosop
 
 |
 
 * https://github.com/napalm-automation/napalm
 * https://napalm.readthedocs.io/en/latest/
+
+|
+
+* Source for the slides and examples:
+     * `https://github.com/dravetech/network-validation-napalm <https://github.com/dravetech/network-validation-napalm>`_
